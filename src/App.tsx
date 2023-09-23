@@ -1,24 +1,13 @@
-import logo from "./logo.svg";
+import { Provider } from "react-redux";
 
-import "./App.css";
+import { store } from "./redux/store";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <div>
-      <div className="app-header">
-        <img src={logo} alt="logo" /> <span>Drivehub</span>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-evenly",
-        }}
-      >
-        <div>Car list</div>
-        <div>Cart</div>
-      </div>
-      <div className="app-footer">FOOTER</div>
-    </div>
+    <Provider store={store}>
+      <Home />
+    </Provider>
   );
 }
 
